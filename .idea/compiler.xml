@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-cloud-consumer" />
+        <module name="spring-cloud-study" />
+        <module name="spring-cloud-eureka" />
+        <module name="spring-cloud-config-server" />
+        <module name="spring-cloud-producer" />
+        <module name="spring-cloud-consul-producer2" />
+        <module name="spring-cloud-consul-producer" />
+        <module name="gateway-service-zuul" />
+        <module name="zipkin-server" />
+        <module name="spring-cloud-gateway" />
+        <module name="spring-cloud-producer-2" />
+        <module name="spring-cloud-producer-1" />
+        <module name="spring-cloud-config-client" />
+        <module name="cloud-gateway-eureka" />
+        <module name="spring-cloud-consul-consumer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springcloudconfiggit1" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-gateway-eureka" options="-parameters" />
+      <module name="gateway-service-zuul" options="-parameters" />
+      <module name="spring-cloud-config-client" options="-parameters" />
+      <module name="spring-cloud-config-server" options="-parameters" />
+      <module name="spring-cloud-consul-consumer" options="-parameters" />
+      <module name="spring-cloud-consul-producer" options="-parameters" />
+      <module name="spring-cloud-consul-producer2" options="-parameters" />
+      <module name="spring-cloud-consumer" options="-parameters" />
+      <module name="spring-cloud-eureka" options="-parameters" />
+      <module name="spring-cloud-gateway" options="-parameters" />
+      <module name="spring-cloud-producer" options="-parameters" />
+      <module name="spring-cloud-producer-1" options="-parameters" />
+      <module name="spring-cloud-producer-2" options="-parameters" />
+      <module name="zipkin-server" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,35 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/TodayIsSunShine/spring-cloud   #配置git仓库的地址
+          search-paths: config-repo          #git仓库相对路径下的地址,可以配置多个,用逗号分隔
+          username:           #git仓库的账号
+          password:           #git仓库的密码
+          force-pull: true                   #yml配置文件时,加上该配置获取配置文件最新代码,否则返回[]
+  rabbitmq:
+    host: localhost
+    port: 15672
+    username: guest
+    password: guest
+
+
+#指向注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+
+#springboot2.0刷新时,关闭安全认证
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-cloud-config-client
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+    port: 15672
+
+server:
+  port: 8082
+
+#刷新时,关闭安全认证
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+    bus-refresh:
+      enabled: true

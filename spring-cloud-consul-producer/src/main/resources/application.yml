@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-cloud-consul-producer
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: service-producer  #注册到 Consul的服务名称,客户端会根据这个名称来进行服务调用。
+server:
+  port: 8501

@@ -1,0 +1,33 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        #        - id: time_route
+        #        - id: cookie_route
+        #        - id: header_route
+        #        - id: host_route
+        #        - id: method_route
+        #        - id: host_route
+        #        - id: query_route
+        #        - id: remoteaddr_route
+        - id: host_foo_path_headers_to_httpbin
+          uri: http://www.ityouknow.com #跳转后的地址
+          predicates:
+            #            - Path=/spring-cloud   #请求地址
+            #            - Before=2018-01-20T06:06:06+08:00[Asia/Shanghai]
+            #            - Cookie=ityouknow, kee.e
+            #            - Header=X-Request-Id, \d+
+            #            - Host=**.ityouknow.com
+            #            - Method=Get
+            #            - Path=/foo/{params}
+            #            - RemoteAddr=127.0.0.1/24
+            - Host=**.foo.org
+            - Path=/headers
+            - Method=GET
+            - Header=X-Request-Id, \d+
+            - Query=foo, ba.
+            - Query=baz
+            - Cookie=chocolate, ch.p
+            - After=2018-01-20T06:06:06+08:00[Asia/Shanghai]
