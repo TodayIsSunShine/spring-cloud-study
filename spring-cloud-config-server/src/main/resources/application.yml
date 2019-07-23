@@ -39,4 +39,4 @@ management:
 jasypt:
   encryptor:
     #加密所需要的salt
-    password: xiangzi
+    password: yoursalt
