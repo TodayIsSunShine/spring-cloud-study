@@ -7,29 +7,36 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/TodayIsSunShine/spring-cloud   #配置git仓库的地址
-          search-paths: config-repo          #git仓库相对路径下的地址,可以配置多个,用逗号分隔
-          username:           #git仓库的账号
-          password:           #git仓库的密码
-          force-pull: true                   #yml配置文件时,加上该配置获取配置文件最新代码,否则返回[]
+          uri: https://github.com/TodayIsSunShine/spring-cloud-study   #配置git仓库的地址
+          search-paths: neo-config         #git仓库相对路径下的地址,可以配置多个,用逗号分隔
+          #默认加密方式PBEWithMD5AndDES,可以更改为PBEWithMD5AndTripleDES
+          username: ENC(3DTdt58TF9qtiH7xR83eHvR9UaC6IaFw)         #git仓库的账号
+          password: ENC(81hJXkSynLYccHlpArUHfDS3tuDzGxnj)         #git仓库的密码
+          force-pull: true                  #yml配置文件时,加上该配置获取配置文件最新代码,否则返回[]
   rabbitmq:
-    host: localhost
-    port: 15672
-    username: guest
-    password: guest
+    host: 119.23.24.1
+    port: 5672   #15672是后台管理端口,5672是客户端端口
+    username: admin
+    password: ENC(Onc5tjCkcRW2YdveH5DujA==)
 
 
-#指向注册中心
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka/
+  instance:
+    appname: spring-cloud-config-server
+    prefer-ip-address: true  #在注册中心显示ip地址
 
-
-#springboot2.0刷新时,关闭安全认证
 management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
-
+        include: "*"
+  endpoint:
+    env:
+      enabled: true #启用端点env
+jasypt:
+  encryptor:
+    #加密所需要的salt
+    password: xiangzi

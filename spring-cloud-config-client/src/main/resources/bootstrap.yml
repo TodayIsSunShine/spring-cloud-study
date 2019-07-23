@@ -9,8 +9,11 @@ spring:
         service-id: spring-cloud-config-server  #指定server端的name,也就是server端spring.application.name的值
     bus:
       trace:
-        enabled: true
+        enabled: true  #开启消息跟踪
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka/     #指向注册中心的地址
+  instance:
+    appname: spring-cloud-config-client
+    prefer-ip-address: true

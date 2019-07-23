@@ -2,19 +2,21 @@ spring:
   application:
     name: spring-cloud-config-client
   rabbitmq:
-    host: localhost
-    username: guest
-    password: guest
-    port: 15672
+    host: 119.23.24.1
+    username: admin
+    password: admin
+    port: 5672
 
 server:
-  port: 8082
+  port: 8002
 
-#刷新时,关闭安全认证
 management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
-    bus-refresh:
+        #使用项目路径 +/actuator/bus-refresh 来刷新标记@RefreshScope注解的配置
+        include: "*"
+  endpoint:
+    env:
+      #启用端点 env
       enabled: true
