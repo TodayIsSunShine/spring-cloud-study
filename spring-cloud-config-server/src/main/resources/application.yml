@@ -14,7 +14,7 @@ spring:
           password: ENC(81hJXkSynLYccHlpArUHfDS3tuDzGxnj)         #git仓库的密码
           force-pull: true                  #yml配置文件时,加上该配置获取配置文件最新代码,否则返回[]
   rabbitmq:
-    host: 119.23.24.1
+    host: 106.13.162.44
     port: 5672   #15672是后台管理端口,5672是客户端端口
     username: admin
     password: ENC(Onc5tjCkcRW2YdveH5DujA==)
