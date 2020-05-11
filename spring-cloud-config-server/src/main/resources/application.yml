@@ -10,14 +10,14 @@ spring:
           uri: https://github.com/TodayIsSunShine/spring-cloud-study   #配置git仓库的地址
           search-paths: neo-config         #git仓库相对路径下的地址,可以配置多个,用逗号分隔
           #默认加密方式PBEWithMD5AndDES,可以更改为PBEWithMD5AndTripleDES
-          username: ENC(3DTdt58TF9qtiH7xR83eHvR9UaC6IaFw)         #git仓库的账号
-          password: ENC(81hJXkSynLYccHlpArUHfDS3tuDzGxnj)         #git仓库的密码
+          username: ENC(TgsbUwTrTd0nM6es3ZlhwZ/O0//FhyHf)         #git仓库的账号
+          password: ENC(30biMzIQPYWtu5/G1m7r6dkOZu2Gi2F+)         #git仓库的密码
           force-pull: true                  #yml配置文件时,加上该配置获取配置文件最新代码,否则返回[]
   rabbitmq:
     host: 106.13.162.44
     port: 5672   #15672是后台管理端口,5672是客户端端口
     username: admin
-    password: ENC(Onc5tjCkcRW2YdveH5DujA==)
+    password: admin-rabbitmq
 
 
 eureka:
